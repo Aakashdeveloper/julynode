@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.use(cors())
 
 //const mongourl = "mongodb://localhost:27017"
-const mongourl = "mongodb+srv://local:testuser@cluster0.f8vmc.mongodb.net/zomato?retryWrites=true&w=majority"
+const mongourl = "mongodb+srv://local:testuser@cluster0.f8vmc.mongodb.net/augintern?retryWrites=true&w=majority"
 var db;
 //get
 app.get('/',(req,res) => {
@@ -204,7 +204,7 @@ app.put('/updateStatus/:id',(req,res) => {
 
 MongoClient.connect(mongourl, (err,client) => {
     if(err) console.log("Error While Connecting");
-    db = client.db('zomato');
+    db = client.db('augintern');
     app.listen(port,()=>{
         console.log(`listening on port no ${port}`)
     });
