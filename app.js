@@ -3,11 +3,10 @@ const app = express();
 const bodyParser = require('body-parser');
 const dotenv = require('dotenv')
 dotenv.config()
-const port =  process.env.PORT||8210;
+const port =  process.env.PORT;
 const mongo = require('mongodb');
 const MongoClient = mongo.MongoClient;
 const cors = require('cors')
-// to recive data from form
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 app.use(cors())
