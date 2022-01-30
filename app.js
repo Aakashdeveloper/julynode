@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.use(cors())
 
 //const mongourl = "mongodb://localhost:27017"
-const mongourl = "mongodb+srv://local:testuser@cluster0.f8vmc.mongodb.net/augintern?retryWrites=true&w=majority"
+const mongourl = "mongodb+srv://local:test12345@cluster0.f8vmc.mongodb.net/augintern?retryWrites=true&w=majority"
 var db;
 //get
 app.get('/',(req,res) => {
